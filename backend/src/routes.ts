@@ -1,4 +1,4 @@
-import { UserController } from './controller/UserController';
+import UserController from './controller/UserController';
 
 export const Routes = [
 	{
@@ -26,3 +26,5 @@ export const Routes = [
 		action: 'remove',
 	},
 ];
+
+export default Routes;

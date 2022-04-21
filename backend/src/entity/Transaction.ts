@@ -21,7 +21,7 @@ export class Transaction {
 		enum: TransactionType,
 		default: [TransactionType.EXPENSE],
 	})
-	transaction_behavior: string;
+	transaction_type: string;
 
 	@CreateDateColumn({ type: 'timestamp' })
 	createdAt: Date;

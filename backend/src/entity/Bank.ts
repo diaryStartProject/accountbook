@@ -1,7 +1,7 @@
 import { Entity, ObjectIdColumn, ObjectID, Column, CreateDateColumn } from 'typeorm';
 
 @Entity()
-export class Bank {
+class Bank {
 	@ObjectIdColumn()
 	id: ObjectID;
 
@@ -11,6 +11,11 @@ export class Bank {
 	@Column()
 	bank_number: string;
 
+	@Column()
+	bank_variable: string;
+
 	@CreateDateColumn({ type: 'timestamp' })
 	createdAt: Date;
 }
+
+export default Bank;

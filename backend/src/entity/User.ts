@@ -1,9 +1,9 @@
 import { timeStamp } from 'console';
-import { Entity, ObjectIdColumn, ObjectID, Column } from 'typeorm';
+import { Entity, ObjectIdColumn, ObjectID, Column, BaseEntity } from 'typeorm';
 import { Account } from './Account';
 
 @Entity()
-export class User {
+class User extends BaseEntity {
 	@ObjectIdColumn()
 	id: ObjectID;
 
@@ -20,8 +20,10 @@ export class User {
 	login_date: Date;
 
 	@Column()
-	ip: string;
+	ip_address: string;
 
 	@Column((type) => Account)
 	accounts: Account[];
 }
+
+export default User;

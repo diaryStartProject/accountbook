@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 
-export const AppDataSource = new DataSource({
+const AppDataSource = new DataSource({
 	type: 'mongodb',
 	database: 'accountbook',
 	synchronize: true,
@@ -10,3 +10,5 @@ export const AppDataSource = new DataSource({
 	migrations: [],
 	subscribers: [],
 });
+
+export default AppDataSource;
